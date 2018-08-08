@@ -1,0 +1,47 @@
+@import "_reset";
+
+$grey: #f4f4ef;
+$black: #000;
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #app {
+    max-width: 320px;
+    max-height: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .row {
+      border-bottom: 1px solid $black;
+      min-height: 50px;
+      flex: 1;
+      display: flex;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .box {
+        flex: 1;
+        border-left: 1px solid $black;
+        height: 100%;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          background-color: $grey;
+        }
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
